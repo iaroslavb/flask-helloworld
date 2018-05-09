@@ -5,6 +5,7 @@ services:
 
 before_install:
   - docker pull iaroslavb/flask-helloworld
+  - pwd
 
 script:
   - docker image ls
