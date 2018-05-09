@@ -6,8 +6,10 @@ services:
 before_install:
   - sudo apt-get install -qq curl
   - docker pull iaroslavb/flask-helloworld
+  - python hello.py &
 
 script:
   - docker image ls
   - docker version
+  - curl "localhost:80"
 
