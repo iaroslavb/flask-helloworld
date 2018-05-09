@@ -7,10 +7,9 @@ before_install:
   - sudo apt-get install -qq curl
   - docker pull iaroslavb/flask-helloworld
   - sudo pip install -r requirements.txt
-  - python hello.py &
+  - python hello.py
 
 script:
-  - docker image ls
-  - docker version
+  - sudo netstat -antlp
   - curl "http://127.0.0.1:5000"
 
