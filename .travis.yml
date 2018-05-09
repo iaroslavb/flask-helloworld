@@ -9,3 +9,5 @@ install:
 
 script:
   - pip list
+  - FLASK_APP=hello.py flask run &
+  - sudo netstat -antlp
