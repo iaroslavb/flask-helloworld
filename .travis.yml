@@ -11,5 +11,5 @@ before_install:
 script:
   - docker image ls
   - docker version
-  - curl "localhost:80"
+  - curl "localhost:5000"
 
