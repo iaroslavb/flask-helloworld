@@ -1,18 +1,11 @@
-sudo: required
-
 language: python
-
 python:
   - "3.6"
-
-before_install:
-  - sudo apt-get install -qq curl
-
+  - "3.6-dev"  # 3.6 development branch
+  - "3.7-dev"  # 3.7 development branch
+# command to install dependencies
 install:
-  - sudo pip install flask redis
+  - pip install -r requirements.txt
 
 script:
-  - python hello.py &
-  - sudo netstat -antlp
-  - curl "http://127.0.0.1:5000"
-
+  - pip list
