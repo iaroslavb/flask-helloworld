@@ -6,7 +6,7 @@ services:
 before_install:
   - sudo apt-get install -qq curl
   - docker pull iaroslavb/flask-helloworld
-  - pip install -r requirements.txt
+  - sudo pip install -r requirements.txt
   - python hello.py &
 
 script:
