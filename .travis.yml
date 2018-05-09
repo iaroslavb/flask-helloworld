@@ -4,10 +4,10 @@ services:
   - docker
 
 before_install:
+  - sudo apt-get install -qq curl
   - docker pull iaroslavb/flask-helloworld
-  - pwd
 
 script:
   - docker image ls
-
+  - docker version
 
